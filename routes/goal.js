@@ -1,5 +1,5 @@
 const express = require('express');
-const Goal = require('../models/Goal');
+const goal = require('../models/goal');
 const router = express.Router();
 
 // Set a fitness goal
