@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
 // Get all exercises for a user
 router.get('/:userId', async (req, res) => {
   try {
-    const exercises = await Exercise.find({ userId: req.params.userId });
+    const exercises = await exercise.find({ userId: req.params.userId });
     res.json(exercises);
   } catch (err) {
     res.status(400).json({ error: 'Failed to fetch exercises' });
