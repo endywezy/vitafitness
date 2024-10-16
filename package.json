@@ -1,10 +1,9 @@
 {
   "name": "node_js_basics",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
     "test": "./node_modules/mocha/bin/mocha --require babel-register --exit",
     "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
@@ -12,8 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "chai-http": "^4.3.0",
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -27,5 +31,15 @@
     "mocha": "^6.2.2",
     "request": "^2.88.0",
     "sinon": "^7.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endywezy/vitafitness.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/endywezy/vitafitness/issues"
+  },
+  "homepage": "https://github.com/endywezy/vitafitness#readme",
+  "description": ""
 }
