@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/user');
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -11,7 +11,7 @@ router.post('/signup', async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   try {
-    const newUser = await User.create({ username, email, password: hashedPassword });
+    const newUser = await user.create({ username, email, password: hashedPassword });
     res.status(201).json(newUser);
   } catch (err) {
     res.status(400).json({ error: 'User creation failed' });
